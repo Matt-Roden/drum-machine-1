@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <PadsContainer audioBank={audioBank} key={Date.now()}/>
+      <PadsContainer audioBank={audioBank} key={Date.now()} volume={volume}/>
       <div className='controls'> 
         <h4>Volume</h4>
         <input 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/Pad.scss'
 
-const Pad = ({ clip }) => {
+const Pad = ({ clip, volume }) => {
 
   const [active, setActive] = useState(false)
 
