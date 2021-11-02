@@ -22,6 +22,7 @@ const Pad = ({ clip, volume }) => {
     const audioTag = document.getElementById(clip.keyTrigger)
     setActive(true);
     setTimeout(() => setActive(false, 200))
+    audioTag.volume = volume
     audioTag.currentTime = 0;
     audioTag.play()
   }
