@@ -1,12 +1,13 @@
 .single-pad {
   width: 100px;
   height: 100px;
-  background-color: gray;
+  background: linear-gradient(to right, #6c6e70, #707070);
   margin: 5px;
   display: flex;
   padding: 3px;
+  border-radius: 5px;
 }
 
 .pad-active {
-  background-color: rgb(243, 243, 252);
+  background: rgb(243, 243, 252);
 }
