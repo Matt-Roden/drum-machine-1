@@ -1,5 +1,6 @@
 import React from 'react'
 import Pad from './Pad'
+import '../styles/PadsContainer.scss'
 
 const Padscontainer = ({ audioBank }) => {
 

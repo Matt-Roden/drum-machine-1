@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Pad.scss'
 
 const Pad = ({ clip }) => {
 
