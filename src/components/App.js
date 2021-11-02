@@ -8,19 +8,21 @@ const App = () => {
 
   return (
     <div className="App">
-      <PadsContainer audioBank={audioBank} key={Date.now()} volume={volume}/>
-      <div className='controls'> 
-        <h4>Volume</h4>
-        <input 
-          className='volume-fader' 
-          type='range' 
-          step='0.01' 
-          value={volume} 
-          max='1' 
-          min='0'
-          onChange={(e) => setVolume(e.target.value)}  
-        />
-      </div>
+      <section className='drum-machine'>
+        <PadsContainer audioBank={audioBank} key={Date.now()} volume={volume}/>
+        <div className='controls'> 
+          <h4>Volume</h4>
+          <input 
+            className='volume-fader' 
+            type='range' 
+            step='0.01' 
+            value={volume} 
+            max='1' 
+            min='0'
+            onChange={(e) => setVolume(e.target.value)}  
+          />
+        </div>
+      </section>
     </div>
   );
 }
