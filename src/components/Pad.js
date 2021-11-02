@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Pad.scss'
 
 const Pad = ({ clip }) => {
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress);
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [])
+
+  const handleKeyPress = (event) => {
+    if(event.keyCode === clip.keyCode) {
+      playSound()
+    }
+  }
 
   const playSound = () => {
     const audioTag = document.getElementById(clip.keyTrigger)
