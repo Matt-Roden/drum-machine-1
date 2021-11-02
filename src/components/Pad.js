@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/Pad.scss'
 
 const Pad = ({ clip }) => {
+
+  const [active, setActive] = useState(false)
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyPress);
@@ -18,12 +20,14 @@ const Pad = ({ clip }) => {
 
   const playSound = () => {
     const audioTag = document.getElementById(clip.keyTrigger)
+    setActive(true);
+    setTimeout(() => setActive(false, 200))
     audioTag.currentTime = 0;
     audioTag.play()
   }
 
   return (
-    <div onClick={playSound} className='single-pad'>
+    <div onClick={playSound} className={`single-pad ${active && 'pad-active'}`}>
       <audio className='clip' id={clip.keyTrigger} src={clip.url} />
       {clip.keyTrigger}
     </div>
