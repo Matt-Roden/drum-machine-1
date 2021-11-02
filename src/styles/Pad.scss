@@ -3,8 +3,10 @@
   height: 100px;
   background-color: gray;
   margin: 5px;
+  display: flex;
+  padding: 3px;
 }
 
 .pad-active {
-  background-color: blue;
+  background-color: rgb(243, 243, 252);
 }

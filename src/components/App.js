@@ -8,6 +8,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>Matt's Drum Machine #1</h1>
       <section className='drum-machine'>
         <PadsContainer audioBank={audioBank} key={Date.now()} volume={volume}/>
         <div className='controls'> 
